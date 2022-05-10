@@ -11,8 +11,31 @@ ___
 > 학습내용
 ##### servlet의 이해
 * helloServlet 생성 및 활용
-##### request 객체 활용
+* 포스트 맨 활용
+##### request 객체 활용 - 서블릿
 * request content, header, body 관련 레거시한 작성법
 * 관련 유용한 메서드 작성
+  ~~~
+  [데이터 받기] 3가지 방법
+  - GET parameter (quary parameter)
+  - POST HMTL Form 태그
+  - HTML message body
+    ㄴ JSON, XML, TEXT 
+    ㄴ 여기선 JSON 으로 객체 활용해서 받음(HelloData)
+  ~~~
+##### response 객체 활용 - 서블릿
+* Status-line, 편의 메서드 작성
+  - content
+  - cookie 
+  - redirect
+  - writer.println
+  ~~~
+  [응답 보내기] 3가지 방법
+  - text
+  - html
+  - JSON
+    ㄴ 객체 활용해서 받음(HelloData)
+  ~~~
+
 
 
