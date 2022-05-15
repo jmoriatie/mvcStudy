@@ -92,7 +92,8 @@ public class RequestHeaderServlet extends HttpServlet {
     }
 
     // 기타정보
-    private void printEtc(HttpServletRequest request) { System.out.println("--- 기타 조회 start ---");
+    private void printEtc(HttpServletRequest request) {
+        System.out.println("--- 기타 조회 start ---");
         System.out.println("[Remote 정보]"); // 요청온 네트워크 커넥션 정보
         System.out.println("request.getRemoteHost() = " + request.getRemoteHost()); //
         System.out.println("request.getRemoteAddr() = " + request.getRemoteAddr()); //
