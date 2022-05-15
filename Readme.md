@@ -48,6 +48,10 @@ ___
   - 디테일한 코드를 수정하는 것이 실수를 줄이는 개발 방법!
 * v2 : MyView 를 통해 jsp forward 및 rendering
   - Controller 는 jsp forward에 대해 고민X, MyView가 Rendering
-
+* v3 : 서블릿 종속성 제거, 뷰 이름 중복 제거(ModelView 객체)
+  - Controller 가 Servlet 기술을 전혀 사용하지 않아도 되도록 만듦
+    - 장점 : 구현코드의 단순화, 테스트 코드 작성 용이
+  - Controller: 논리이름 반환, Front-Controller: 실제 물리적 위치 처리(viewResolve 메서드)
+    - 장점 : view 폴더 위치 변경시에도 Front-Controller 만 수정하면 됨 -> 유지보수 용이
 
 
