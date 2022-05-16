@@ -59,5 +59,11 @@ ___
   - front-controller 패턴의 구조적인 부분은 v3에서 거의 완성!
 * v4 : 단순하고 실용적인 컨트롤러
   - 개발자가 편할 수 있는 컨트롤러!
-  - v3 랑 동일하지만 Controller 가 view 이름만 반환 
-
+  - v3 랑 동일하지만 Controller 가 view 논리 이름만 반환 
+  - front-controller 에서 model Map 먼저 생성
+  - model Map을 파라미터로 넘겨서, controller 는 걔를 그냥 사용하고 view 논리 이름만 리턴함
+* v5 : 유연한 컨트롤러 사용을 위해, 핸들러 어댑터(handler 를 호출하는 어댑터) 적용
+  - Handler->Controller 로 생각
+  - Hanlder 는 어떤 것이든 해당하는 종류의 어댑터만 있으면 처리할 수 있기에, Controller보다 확장된 개념
+  - Front-Controller 는 Handler adapter 를 통해 Contoller(Handler) 를 호출
+  - 기능이 확장되더라도 HandlerAdapter 만 추가해주면 됨(OCP 와 DIP 가 매우 만족됨)
