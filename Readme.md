@@ -67,3 +67,18 @@ ___
   - Hanlder 는 어떤 것이든 해당하는 종류의 어댑터만 있으면 처리할 수 있기에, Controller보다 확장된 개념
   - Front-Controller 는 Handler adapter 를 통해 Contoller(Handler) 를 호출
   - 기능이 확장되더라도 HandlerAdapter 만 추가해주면 됨(OCP 와 DIP 가 매우 만족됨)
+- ##### Spring MVC
+* 스프링 MVC 전체구조
+* 핸들러 매핑, 핸드러 어댑터, 뷰 리졸버 학습
+- ##### Spring MVC 만들기
+* v1 : 스프링 mvc 이전과 동일하게 -> Controller 분리 된 경우
+* v2 : Controller 통합 + @RequestMapping 사용한 경로 중복 제거
+  - 만약 매핑 주소 중복 시, Ambigous Mapping 오류 나고, 이미 있는 메서라는 오류 남
+  - class 에 선언한 url과 중복 조심 ! 특히 List 를 출력하는 members 같은 느낌 
+* v3 : Spring 에서 제공하는 기능으로 Controller 고도화
+  - @RequestParam 어노테이션을 활용한 파라미터 받기 -> String 으로 view 의 논리이름 반환
+  - Model 객체를 통한 데이터 전달
+  - 메서드별 @RequestMapping 의 HTTP Method 와 동기화를 통한 제한설정 -> GetMapping 등
+    - 최초 : @RequestMapping(value = "/new-form", method = RequestMethod.GET)
+    - 진화 : @GetMapping("/new-form")
+
